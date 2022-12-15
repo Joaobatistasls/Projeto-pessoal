@@ -1,4 +1,4 @@
-document.querySelector(".btn").addEventListener("click", () => {
+document.querySelector("#btn").addEventListener("click", () => {
 
     let input = document.querySelector("#searchInput").value;
 
@@ -30,29 +30,29 @@ document.querySelector(".btn").addEventListener("click", () => {
 
 // Função para exibir a mensagem de carregando
 function showWarning(msg) {
-    document.querySelector(".warning").innerHTML = msg;
+    document.querySelector("#warning").innerHTML = msg;
 };
 
 // Função que mostra as informações
 function display(json) {
     showWarning("");
 
-    document.querySelector(".titulo").style.display = "none";
+    document.querySelector("#titulo").style.display = "none";
     
-    document.querySelector(".photos img").setAttribute("src", `./images/${json.photo}`);
+    document.querySelector("#photos img").setAttribute("src", `./images/${json.photo}`);
 
-    document.querySelector(".name span").innerHTML = `${json.name}`;
-    document.querySelector(".lastname span").innerHTML = `${json.lastname}`;
-    document.querySelector(".age span").innerHTML = `${json.age}`;
-    document.querySelector(".sons span").innerHTML = `${json.sons}`;
-    document.querySelector(".job span").innerHTML = `${json.job}`;
-    document.querySelector(".animals span").innerHTML = `${json.animals}`;
+    document.querySelector("#name span").innerHTML = `${json.name}`;
+    document.querySelector("#lastname span").innerHTML = `${json.lastname}`;
+    document.querySelector("#age span").innerHTML = `${json.age}`;
+    document.querySelector("#sons span").innerHTML = `${json.sons}`;
+    document.querySelector("#job span").innerHTML = `${json.job}`;
+    document.querySelector("#animals span").innerHTML = `${json.animals}`;
 
-    document.querySelector(".container").style.display = "block";
+    document.querySelector("#container").style.display = "block";
 };
 
 // Função para limpar as informações
 function clearInfo() {
     showWarning("");
-    document.querySelector(".container").style.display = "none";
+    document.querySelector("#container").style.display = "none";
 };
